@@ -7,10 +7,13 @@
 //
 
 import UIKit
-
+import SwiftUI
 
 class ViewController: UIViewController {
 
+    @IBSegueAction func pizzaHistorySegue(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: HistoryView())
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
